@@ -1,0 +1,146 @@
+/* Загальні стилі для всіх сторінок */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+/* Хедер */
+header {
+    grid-area: header;
+    background: linear-gradient(90deg, #2b3a67, #3f538a);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Сайдбар */
+aside {
+    grid-area: sidebar;
+    background-color: #f3f3f3;
+    padding: 1.5rem;
+    border-right: 1px solid #ddd;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #2b3a67;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+aside a:hover {
+    color: #2b3a67;
+    font-weight: bold;
+}
+
+/* Основна частина */
+main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+main h2 {
+    color: #2b3a67;
+    margin-bottom: 1rem;
+}
+
+main p, main ul, main form {
+    line-height: 1.7;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* Футер */
+footer {
+    grid-area: footer;
+    background-color: #2b3a67;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Форма */
+form input, form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.7rem 1.5rem;
+    background-color: #2b3a67;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #3f538a;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    body {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 0.5rem 0.5rem;
+    }
+}
