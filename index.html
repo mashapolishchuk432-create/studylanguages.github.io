@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Стилі верхнього меню */
+        
         header {
             display: flex;
             justify-content: space-between;
@@ -36,6 +37,39 @@
         nav {
             display: flex;
         }
+        /* --- Горизонтальне меню у aside --- */
+         aside ul {
+         list-style: none;       /* вже є — залишаємо */
+         padding-left: 0;
+         display: flex;          /* робить список горизонтальним */
+         gap: 1rem;              /* відступи між елементами */
+         flex-wrap: wrap;        /* дозволяє перенос на новий рядок, якщо не влазять */
+         }
+
+        aside ul li {
+         margin-bottom: 0; /* прибираємо нижній відступ, бо елементи горизонтальні */
+        }
+
+         aside ul li a {
+         display: block;
+         padding: 0.5rem 1rem;
+         background-color: #e0e0e0;
+         border-radius: 5px;
+         text-decoration: none;
+         color: #2b3a67;
+         transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+         /* --- Наведення миші --- */
+        aside ul li a:hover {
+         background-color: #cfd8ff;
+         color: #1a237e;
+         }
+
+         /* --- Натискання --- */
+        aside ul li a:active {
+         background-color: #aebdff;
+         }
     </style>
 </head>
  <body>
